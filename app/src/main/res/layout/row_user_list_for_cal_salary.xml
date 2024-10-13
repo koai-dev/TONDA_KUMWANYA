@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_ten">
+
+
+        <LinearLayout
+            android:layout_toLeftOf="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_toStartOf="@+id/ll"
+            android:layout_alignParentStart="true">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/iv_user_profile_image"
+                android:layout_width="@dimen/dimen_user_profile"
+                android:layout_height="@dimen/dimen_user_profile"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/baseline_account_circle_black"
+                app:civ_border_color="@color/colorDivider"
+                app:civ_border_width="1dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_five"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_person_name"
+                    style="@style/customTextView"
+                    android:text="User Name"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_person_mobile_no"
+                    style="@style/customTextView"
+                    android:layout_marginTop="@dimen/dimen_five"
+                    android:text="User Mobile No"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_person_designation"
+                style="@style/customTextView"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/dimen_small"
+                android:text="WORKER"
+                android:textColor="@color/colorSecondaryText"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/customTextView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:tint="@color/colorSecondaryText"
+                app:srcCompat="@drawable/ic_navigate_next_24dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

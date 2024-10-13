@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_ten">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@+id/ll"
+            android:layout_toLeftOf="@+id/ll"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/iv_user_profile_image"
+                android:layout_width="@dimen/dimen_user_profile"
+                android:layout_height="@dimen/dimen_user_profile"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/baseline_account_circle_black"
+                app:civ_border_color="@color/colorDivider"
+                app:civ_border_width="1dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_five"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_person_name"
+                    style="@style/customTextView"
+                    android:text="User Name"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_person_mobile_no"
+                    style="@style/customTextView"
+                    android:layout_marginTop="@dimen/dimen_five"
+                    android:text="User Mobile No" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_ten"
+            android:layout_marginRight="@dimen/dimen_ten"
+            android:layout_toLeftOf="@+id/iv_next"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_toStartOf="@+id/iv_next">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_track_employee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorSecondaryText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_tracking_status"
+                style="@style/customTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_next"
+            style="@style/customTextView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:tint="@color/colorSecondaryText"
+            app:srcCompat="@drawable/ic_navigate_next_24dp" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

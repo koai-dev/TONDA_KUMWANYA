@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/minDialogWidth"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_fifteen"
+    app:cardBackgroundColor="@android:color/white">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/customTextView"
+        android:text="@string/label_seems_mobile_no_is_not_added_with_dialer_code"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_ten"
+        android:orientation="horizontal">
+
+        <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:minWidth="75dp"
+            android:paddingBottom="@dimen/dimen_ten"
+            app:ccp_hideNameCode="true"
+            app:ccp_hidePhoneCode="false"
+            app:ccp_showFullName="false"
+            app:ccp_textColor="@color/colorPrimaryText"
+            app:ccp_textSize="@dimen/dimen_large" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_mobile_no"
+                style="@style/customEditText"
+                android:hint="@string/hint_mobile_no"
+                android:imeOptions="actionDone"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

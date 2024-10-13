@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:minHeight="?android:attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextAppearance="@style/ToolbarTitle" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_send_salary_slip"
+        android:layout_below="@+id/toolbar">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_screen"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="@dimen/dimen_card_elivation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_ten"
+                android:layout_marginTop="@dimen/dimen_ten"
+                android:layout_marginRight="@dimen/dimen_ten"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/dimen_ten"
+                        android:layout_toLeftOf="@+id/tv_person_name"
+                        android:text="@string/label_name"
+                        android:textColor="@color/colorSecondaryText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_person_name"
+                        style="@style/customTextView"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_ten"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/dimen_ten"
+                        android:layout_toLeftOf="@+id/tv_person_mobile_no"
+                        android:text="@string/label_mobile_no"
+                        android:textColor="@color/colorSecondaryText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_person_mobile_no"
+                        style="@style/customTextView"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_ten"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/dimen_ten"
+                        android:layout_toLeftOf="@+id/tv_person_work_type"
+                        android:text="@string/label_payment_type"
+                        android:textColor="@color/colorSecondaryText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_person_work_type"
+                        style="@style/customTextView"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_ten"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/dimen_ten"
+                        android:text="@string/label_decided_amount"
+                        android:textColor="@color/colorSecondaryText" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_currency_symbol1"
+                            style="@style/customTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="normal" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_person_decided_full_day_amount"
+                            style="@style/customTextView"
+                            android:layout_marginLeft="@dimen/dimen_five" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_ten"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginEnd="@dimen/dimen_ten"
+                        android:layout_marginRight="@dimen/dimen_ten"
+                        android:layout_toStartOf="@+id/tv_total_days_in_month"
+                        android:layout_toLeftOf="@+id/tv_total_days_in_month"
+                        android:text="@string/label_total_days_in_month"
+                        android:textColor="@color/colorSecondaryText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_total_days_in_month"
+                        style="@style/customTextView"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_total_attended_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dimen_ten"
+                    android:paddingBottom="@dimen/dimen_five">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginEnd="@dimen/dimen_ten"
+                        android:layout_marginRight="@dimen/dimen_ten"
+                        android:layout_toStartOf="@+id/tv_total_attended_days"
+                        android:layout_toLeftOf="@+id/tv_total_attended_days"
+                        android:text="@string/label_total_attended_days"
+                        android:textColor="@color/colorSecondaryText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_total_attended_days"
+                        style="@style/customTextView"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_total_actual_Working_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dimen_five"
+                    android:paddingBottom="@dimen/dimen_ten">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginEnd="@dimen/dimen_ten"
+                        android:layout_marginRight="@dimen/dimen_ten"
+                        android:layout_toStartOf="@+id/tv_total_working_days"
+                        android:layout_toLeftOf="@+id/tv_total_working_days"
+                        android:text="@string/label_total_working_days"
+                        android:textColor="@color/colorSecondaryText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_total_working_days"
+                        style="@style/customTextView"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="@dimen/dimen_ten"
+                    android:background="@color/colorDivider" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_gravity="center_vertical"
+                        android:minWidth="200dp"
+                        android:text="@string/label_total_present_days"
+                        android:textColor="@color/colorAccent" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_total_presents"
+                        style="@style/customTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_five"
+                        android:layout_marginLeft="@dimen/dimen_five" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dimen_ten"
+                    android:layout_marginBottom="@dimen/dimen_ten"
+                    android:background="@color/colorDivider" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_gravity="center_vertical"
+                        android:minWidth="200dp"
+                        android:text="@string/label_total_half_days"
+                        android:textColor="@color/colorAccent" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_total_half_days"
+                        style="@style/customTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_five"
+                        android:layout_marginLeft="@dimen/dimen_five" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dimen_ten"
+                    android:background="@color/colorDivider" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_total_absent_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dimen_ten"
+                    android:paddingBottom="@dimen/dimen_ten">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_gravity="center_vertical"
+                        android:minWidth="200dp"
+                        android:text="@string/label_total_absent_days"
+                        android:textColor="@color/colorAccent" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_five"
+                        android:layout_marginLeft="@dimen/dimen_five">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_absent_days"
+                            style="@style/customTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            app:srcCompat="@drawable/ic_info_18dp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="@dimen/dimen_five"
+                    android:background="@color/colorDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/cb_total_public_holidays"
+                        style="@style/customTextView"
+                        android:layout_gravity="center_vertical"
+                        android:minWidth="200dp"
+                        android:text="@string/label_total_public_holidays"
+                        android:textColor="@color/colorAccent" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_total_public_holidays"
+                        style="@style/customTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dimen_five"
+                        android:layout_marginLeft="@dimen/dimen_five" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dimen_five"
+                    android:layout_marginBottom="@dimen/dimen_five"
+                    android:background="@color/colorDivider" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/cb_total_non_working_days"
+                        style="@style/customTextView"
+                        android:layout_gravity="center_vertical"
+                        android:minWidth="200dp"
+                        android:text="@string/label_total_non_working_days"
+                        android:textColor="@color/colorAccent" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_total_non_working_days"
+                        style="@style/customTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dimen_five"
+                        android:layout_marginLeft="@dimen/dimen_five" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dimen_five"
+                    android:background="@color/colorDivider" />
+
+                <LinearLayout
+                    android:id="@+id/ll_total_paid_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dimen_ten"
+                    android:paddingBottom="@dimen/dimen_ten">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_gravity="center_vertical"
+                        android:minWidth="200dp"
+                        android:text="@string/label_total_paid_days"
+                        android:textColor="@color/colorAccent" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_five"
+                        android:layout_marginLeft="@dimen/dimen_five">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_total_paid_days"
+                            style="@style/customEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="sans-serif-medium"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:textStyle="normal" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            app:srcCompat="@drawable/ic_info_18dp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dimen_ten"
+                    android:paddingBottom="@dimen/dimen_ten">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_gravity="center_vertical"
+                        android:minWidth="200dp"
+                        android:text="@string/label_amount_per_day"
+                        android:textColor="@color/colorAccent" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/dimen_five"
+                        android:layout_marginLeft="@dimen/dimen_five"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_currency_symbol2"
+                            style="@style/customTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Rs."
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="normal" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_amount_per_day"
+                            style="@style/customEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_five"
+                            android:layout_marginLeft="@dimen/dimen_five"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="sans-serif-medium"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivider" />
+
+                <LinearLayout
+                    android:id="@+id/ll_total_amount_to_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dimen_ten"
+                    android:paddingBottom="@dimen/dimen_ten">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_gravity="center_vertical"
+                        android:minWidth="200dp"
+                        android:text="@string/label_total_amount_to_pay"
+                        android:textColor="@color/colorAccent" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_five"
+                        android:layout_marginLeft="@dimen/dimen_five">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_currency_symbol3"
+                                style="@style/customTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Rs."
+                                android:textColor="@color/colorPrimaryText"
+                                android:textStyle="normal" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_total_amount_to_pay"
+                                style="@style/customTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen_five"
+                                android:layout_marginLeft="@dimen/dimen_five"
+                                android:fontFamily="sans-serif-medium"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            app:srcCompat="@drawable/ic_info_18dp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dimen_ten"
+                    android:paddingBottom="@dimen/dimen_ten">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/customTextView"
+                            android:layout_gravity="center_vertical"
+                            android:minWidth="200dp"
+                            android:text="Total Over Time (Hours)"
+                            android:textColor="@color/colorPrimaryText" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_total_over_time"
+                            style="@style/customTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_five"
+                            android:layout_marginLeft="@dimen/dimen_five" />
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_gravity="center_vertical"
+                        android:text="Not able to calculate amount for this over time hours. You manually have to count salary for this hours."
+                        android:textColor="@color/colorSecondaryText" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_send_salary_slip"
+        style="@style/customButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:text="@string/btn_send_salary_slip" />
+
+</RelativeLayout>

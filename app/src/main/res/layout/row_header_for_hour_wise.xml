@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:paddingLeft="@dimen/dimen_five"
+    android:paddingRight="@dimen/dimen_five"
+    android:paddingTop="@dimen/dimen_ten"
+    android:paddingBottom="@dimen/dimen_ten">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/customTextView"
+        android:layout_width="0dp"
+        android:layout_weight="0.15"
+        android:gravity="center"
+        android:text="@string/label_date"
+        android:textColor="@android:color/white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_total_days"
+        style="@style/customTextView"
+        android:layout_width="0dp"
+        android:layout_weight="0.15"
+        android:gravity="center"
+        android:text="@string/label_hours"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/customTextView"
+        android:layout_width="0dp"
+        android:layout_weight="0.22"
+        android:gravity="center"
+        android:text="@string/label_in"
+        android:textColor="@android:color/white"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/customTextView"
+        android:layout_width="0dp"
+        android:layout_weight="0.22"
+        android:gravity="center"
+        android:text="@string/label_out"
+        android:textColor="@android:color/white"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/customTextView"
+        android:layout_width="0dp"
+        android:layout_weight="0.26"
+        android:gravity="center"
+        android:text="@string/label_type"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dimen_ten"
+    android:paddingTop="@dimen/dimen_five"
+    android:paddingRight="@dimen/dimen_ten"
+    android:paddingBottom="@dimen/dimen_five">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_mobile_no"
+            style="@style/customEditText"
+            android:backgroundTint="#FFFFFF"
+            android:drawableEnd="@drawable/ic_email_accent_24dp"
+            android:drawableRight="@drawable/ic_email_accent_24dp"
+            android:drawablePadding="@dimen/dimen_five"
+            android:hint="@string/hint_mobile_no_or_email_id"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/colorSecondaryText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_password"
+            style="@style/customEditText"
+            android:backgroundTint="#FFFFFF"
+            android:drawableEnd="@drawable/ic_lock_accent_24dp"
+            android:drawableRight="@drawable/ic_lock_accent_24dp"
+            android:drawablePadding="@dimen/dimen_five"
+            android:hint="@string/hint_password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/colorSecondaryText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/cb_show_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/check_box_selector"
+            android:buttonTint="#FFFFFF"
+            android:text="@string/label_show_password"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/dimen_Value"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+</LinearLayout>
+
+
+
+

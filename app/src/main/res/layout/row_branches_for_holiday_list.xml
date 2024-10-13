@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_ten">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dimen_five"
+            android:layout_toStartOf="@+id/ll"
+            android:layout_toLeftOf="@+id/ll"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/dimen_five">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_branch_name"
+                style="@style/customTextView"
+                android:text="Branch Name"
+                android:textColor="@color/colorPrimaryDark" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_branch_code"
+                style="@style/customTextView"
+                android:layout_marginTop="@dimen/dimen_five"
+                android:text="Branch Code" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_holiday_count"
+                style="@style/customTextView"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/dimen_small" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/customTextView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:tint="@color/colorSecondaryText"
+                app:srcCompat="@drawable/ic_navigate_next_24dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

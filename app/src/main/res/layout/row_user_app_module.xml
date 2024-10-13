@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dimen_screen"
+    android:layout_marginRight="@dimen/dimen_screen"
+    android:layout_marginBottom="@dimen/dimen_screen"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/dimen_card_corner_radius"
+    app:cardElevation="@dimen/dimen_card_elivation"
+    app:contentPadding="@dimen/dimen_card_content_padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:clickable="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@+id/iv_move_next"
+            android:layout_toLeftOf="@+id/iv_move_next"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_module"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_module_mark_attendance" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_module_name"
+                    style="@style/customTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textAlignment="center"
+                    android:textAllCaps="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_module_description"
+                    style="@style/customTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_three"
+                    android:text="Description"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="@dimen/dimen_small" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_new_features"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+            android:src="@drawable/img_new"
+            android:tint="@android:color/holo_red_dark"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,143 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+  </style>
+
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+    <item name="android:textSize">@dimen/toolbarTitle</item>
+    <!--<item name="android:layout_marginLeft">@dimen/dimen_three</item>-->
+    <item name="android:textColorSecondary">@android:color/white</item>
+    <item name="android:windowActionModeOverlay">true</item>
+    <item name="android:fontFamily">sans-serif</item>
+  </style>
+
+
+  <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <!--buttons color-->
+    <item name="colorAccent">@color/colorAccent</item>
+    <!--title and message color-->
+    <item name="android:textColorPrimary">@android:color/black</item>
+    <!--dialog background-->
+    <item name="android:windowBackground">@drawable/background_dialog</item>
+  </style>
+
+
+  <style name="MyCheckBox">
+    <item name="android:buttonTint" tools:targetApi="lollipop">@android:color/black</item>
+  </style>
+
+  <!--View Divider-->
+
+
+  <!--Used where you set label-->
+
+  <!--Used where you set label value-->
+
+  <!--Used where you set Info label value-->
+
+  <style name="customNotes">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/dimen_notes</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:textColor">@color/colorSecondaryText</item>
+    <item name="android:fontFamily">sans-serif</item>
+  </style>
+
+
+  <!--Used for extra labels-->
+  <style name="customTextView">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/dimen_Value</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:textColor">@color/colorPrimaryText</item>
+    <item name="android:textColorHint">@color/colorSecondaryText</item>
+    <item name="android:fontFamily">sans-serif</item>
+  </style>
+
+
+  <!--Used while taking user entry-->
+  <style name="customEditText">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">@color/colorPrimaryText</item>
+    <item name="android:inputType">text</item>
+    <item name="android:textSize">@dimen/dimen_Value</item>
+    <item name="android:textColorHint">@color/colorSecondaryText</item>
+    <item name="android:fontFamily">sans-serif</item>
+    <!--
+    For Reduce space between floating label and edittext text
+    <item name="android:paddingTop">@dimen/dimen_five</item>
+    Remove space from ediitext which by default getting added when we use TextInputLayout
+    <item name="android:layout_marginLeft">-2dp</item>
+    <item name="android:layout_marginStart">-2dp</item>-->
+  </style>
+
+  <!--Used while getting value from user like registration and authentication only-->
+
+
+  <!--Used while getting value from user like registration and authentication only-->
+
+  <style name="customButton">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">40dp</item>
+    <item name="android:textColor">@android:color/white</item>
+    <item name="android:textSize">@dimen/dimen_large</item>
+    <item name="android:background">@drawable/btn</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="android:fontFamily">sans-serif</item>
+  </style>
+
+
+  <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+    <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+    <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+    <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+    <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+  </style>
+
+  <style name="Widget.MaterialSheetFab.Fab" parent="">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginTop">@dimen/fab_spacing</item>
+    <item name="android:layout_marginBottom">@dimen/fab_spacing</item>
+    <item name="android:layout_marginLeft">@dimen/fab_spacing</item>
+    <item name="android:layout_marginRight">@dimen/fab_spacing</item>
+    <item name="android:elevation" tools:ignore="NewApi">@dimen/fab_elevation</item>
+    <item name="android:src">@drawable/ic_add_white_24dp</item>
+    <item name="fabSize">normal</item>
+    <item name="borderWidth">0dp</item>
+  </style>
+
+  <style name="Widget.MaterialSheetFab.Sheet" parent="">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginTop">@dimen/sheet_spacing</item>
+    <item name="android:layout_marginBottom">@dimen/sheet_spacing</item>
+    <item name="android:layout_marginLeft">@dimen/sheet_spacing</item>
+    <item name="android:layout_marginRight">@dimen/sheet_spacing</item>
+    <item name="cardBackgroundColor">@android:color/black</item>
+    <item name="cardElevation">@dimen/fab_sheet_elevation</item>
+    <item name="cardMaxElevation">@dimen/fab_sheet_elevation</item>
+    <item name="contentPadding">-3dp</item>
+  </style>
+
+  <!-- Styles for recyclerView row-->
+
+</resources>

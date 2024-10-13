@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:minHeight="?android:attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextAppearance="@style/ToolbarTitle"
+        app:titleTextColor="@android:color/white" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/dimen_five"
+                android:layout_marginTop="@dimen/dimen_five"
+                android:layout_marginRight="@dimen/dimen_five"
+                android:minWidth="@dimen/minDialogWidth"
+                app:cardCornerRadius="@dimen/dimen_five"
+                app:cardElevation="@dimen/dimen_card_elivation"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_five"
+                    android:layout_marginBottom="@dimen/dimen_five"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:background="@color/colorAccent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/customTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/sub_title_person_information"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/dimen_Value" />
+
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/iv_user_profile_image"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:scaleType="centerInside"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/img_module_user_profile"
+                            app:civ_border_color="@color/colorDivider"
+                            app:civ_border_width="1dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_fifteen"
+                        android:layout_marginRight="@dimen/dimen_fifteen"
+                        android:orientation="vertical">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_five">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_person_name"
+                                style="@style/customEditText"
+                                android:enabled="false"
+                                android:hint="@string/hint_person_name"
+                                android:imeOptions="actionNext" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_person_address"
+                                style="@style/customEditText"
+                                android:enabled="false"
+                                android:inputType="textMultiLine"
+                                android:hint="@string/hint_person_address"
+                                android:imeOptions="actionNext" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_person_dob"
+                                style="@style/customEditText"
+                                android:enabled="false"
+                                android:hint="@string/hint_date_of_birth"
+                                android:imeOptions="actionNext" />
+
+                        </com.google.android.material.textfield.TextInputLayout>s
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_person_mobile_no"
+                                style="@style/customEditText"
+                                android:enabled="false"
+                                android:hint="@string/hint_mobile_no"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_person_email_id"
+                                style="@style/customEditText"
+                                android:hint="@string/hint_email_id"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_person_password"
+                                style="@style/customEditText"
+                                android:hint="@string/hint_password"
+                                android:imeOptions="actionNext"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_person_designation"
+                                style="@style/customEditText"
+                                android:enabled="false"
+                                android:hint="@string/hint_designation_exe_worker_manager"
+                                android:imeOptions="actionNext"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_currency_symbol"
+                                style="@style/customEditText"
+                                android:enabled="false"
+                                android:hint="@string/hint_currency_symbol"
+                                android:imeOptions="actionDone"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_time_slot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_five"
+                android:layout_marginRight="@dimen/dimen_five"
+                android:minWidth="@dimen/minDialogWidth"
+                app:cardCornerRadius="@dimen/dimen_five"
+                app:cardElevation="@dimen/dimen_card_elivation"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_five"
+                    android:layout_marginBottom="@dimen/dimen_five"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="?attr/colorAccent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/customTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/sub_title_time_slots"
+                            android:textColor="?attr/colorAccent"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_five"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimaryLight"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@string/label_day"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:background="?attr/selectableItemBackground"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_from"
+                                    android:textSize="12sp" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/customTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/colorSecondaryText" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_to"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="@string/label_full_day_hours_"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="@string/label_allow_half_day_"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:text="@string/label_half_day_hours_"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/dimen_five"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_monday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/dimen_five"
+                                android:gravity="center_horizontal"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_monday" />
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_select_shop_time_for_monday"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_from_monday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/customTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/colorSecondaryText" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_to_monday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_full_day_hours_for_monday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="false"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:text="00:00" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatCheckBox
+                                    android:id="@+id/chk_half_day_allow_for_monday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:layout_gravity="center" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_half_day_hours_for_monday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="false"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:hint="@string/label_set" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_tuesday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/dimen_five"
+                                android:gravity="center_horizontal"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_tuesday" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_select_shop_time_for_tuesday"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_from_tuesday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/customTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/colorSecondaryText" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_to_tuesday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_full_day_hours_for_tuesday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:text="00:00" />
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_vertical">
+
+                                <androidx.appcompat.widget.AppCompatCheckBox
+                                    android:id="@+id/chk_half_day_allow_for_tuesday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:layout_gravity="center" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_half_day_hours_for_tuesday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:hint="@string/label_set" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_wednesday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/dimen_five"
+                                android:gravity="center_horizontal"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_wednesday" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_select_shop_time_for_wednesday"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_from_wednesday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/customTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/colorSecondaryText" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_to_wednesday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_full_day_hours_for_wednesday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="false"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:text="00:00" />
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_vertical">
+
+                                <androidx.appcompat.widget.AppCompatCheckBox
+                                    android:id="@+id/chk_half_day_allow_for_wednesday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:layout_gravity="center" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_half_day_hours_for_wednesday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="false"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:hint="@string/label_set" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_thursday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/dimen_five"
+                                android:gravity="center_horizontal"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_thuresady" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_select_shop_time_for_thuresday"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_from_thuresday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/customTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/colorSecondaryText" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_to_thuresday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_full_day_hours_for_thuresday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="00:00" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_vertical">
+
+                                <androidx.appcompat.widget.AppCompatCheckBox
+                                    android:id="@+id/chk_half_day_allow_for_thuresday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:layout_gravity="center" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_half_day_hours_for_thuresday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:hint="@string/label_set" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_friday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/dimen_five"
+                                android:gravity="center_horizontal"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_friday" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_select_shop_time_for_friday"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_from_friday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/customTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/colorSecondaryText" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_to_friday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_full_day_hours_for_friday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:text="00:00" />
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatCheckBox
+                                    android:id="@+id/chk_half_day_allow_for_friday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:layout_gravity="center" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_half_day_hours_for_friday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:hint="@string/label_set" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_saturday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/dimen_five"
+                                android:gravity="center_horizontal"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_saturday" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_select_shop_time_for_saturday"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_from_saturday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/customTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/colorSecondaryText" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_to_saturday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_full_day_hours_for_saturday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="false"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:text="00:00" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatCheckBox
+                                    android:id="@+id/chk_half_day_allow_for_saturday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:layout_gravity="center" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_half_day_hours_for_saturday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:hint="@string/label_set" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_sunday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/dimen_five"
+                                android:gravity="center_horizontal"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_sunday" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_select_shop_time_for_sunday"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_from_sunday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/customTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/colorSecondaryText" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_shop_time_to_sunday"
+                                    style="@style/customTextView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="@string/label_close" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_full_day_hours_for_sunday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="00:00" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatCheckBox
+                                    android:id="@+id/chk_half_day_allow_for_sunday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:layout_gravity="center" />
+                            </LinearLayout>
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_half_day_hours_for_sunday"
+                                style="@style/customTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:hint="@string/label_set" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customNotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dimen_ten"
+                        android:layout_marginTop="@dimen/dimen_ten"
+                        android:layout_marginRight="@dimen/dimen_ten"
+                        android:text="@string/label_consider_as_leave_if_user_leave_before" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/dimen_five"
+                android:layout_marginRight="@dimen/dimen_five"
+                android:minWidth="@dimen/minDialogWidth"
+                app:cardCornerRadius="@dimen/dimen_five"
+                app:cardElevation="@dimen/dimen_card_elivation"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_five"
+                    android:layout_marginBottom="@dimen/dimen_five"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_thirty">
+
+                        <View
+                            android:layout_width="@dimen/dimen_eight"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:background="@color/colorAccent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/customTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dimen_fifteen"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/sub_title_payment_info"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/dimen_Value" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/dimen_fifteen"
+                        android:layout_marginTop="@dimen/dimen_ten"
+                        android:layout_marginRight="@dimen/dimen_fifteen">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/customTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:minWidth="150dp"
+                            android:text="@string/label_payment_type" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_selected_work_type"
+                            style="@style/customTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/dimen_fifteen"
+                        android:layout_marginTop="@dimen/dimen_ten"
+                        android:layout_marginRight="@dimen/dimen_fifteen">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/customTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:minWidth="150dp"
+                            android:text="@string/hint_amount" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_amount"
+                            style="@style/customTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_amount_suffix"
+                            style="@style/customTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_five"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

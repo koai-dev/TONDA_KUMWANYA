@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:minHeight="?android:attr/actionBarSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextAppearance="@style/ToolbarTitle" />
+
+    <fragment
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/cv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#082130"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_screen">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAttendancePunchType"
+                    style="@style/customTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/frag_attendance_punch_in_now"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dimen_xlarge"
+                    android:textStyle="bold" />
+
+                <in.gabsinfo.usertimeslotgeofenceattendance.utils.DigitalClock
+                    android:id="@+id/tvAttendanceCurrentTime"
+                    style="@style/customTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAttendancePunchType"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_screen"
+                    android:text="@string/frag_attendance_default_time"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white" />
+
+
+                <in.gabsinfo.usertimeslotgeofenceattendance.utils.TextAwesome
+                    android:id="@+id/tvAttendanceCurrentTimeIcon"
+                    style="@style/customTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAttendancePunchType"
+                    android:layout_alignBaseline="@+id/tvAttendanceCurrentTime"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tvAttendanceCurrentTime"
+                    android:text="@string/fa_circle"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_current_location_accuracy"
+                    style="@style/customTextView"
+                    android:layout_below="@+id/tvAttendanceCurrentTime"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_screen"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/holo_orange_dark" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dimen_screen"
+                android:layout_marginTop="@dimen/dimen_screen"
+                android:layout_marginRight="@dimen/dimen_screen"
+                android:background="@color/colorDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_screen"
+                android:layout_marginTop="@dimen/dimen_screen"
+                android:layout_marginRight="@dimen/dimen_screen"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAttendanceDay"
+                        style="@style/customTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/frag_attendance_today"
+                        android:textColor="@color/colorYellow" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAttendanceCurrentDate"
+                        style="@style/customTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tvAttendanceDay"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/colorYellow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_screen"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAttendanceInTime"
+                        style="@style/customTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/frag_attendance_in_time"
+                        android:textColor="@android:color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAttendancePunchInTime"
+                        style="@style/customTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tvAttendanceInTime"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tvAttendanceInTime"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAttendancePunchOutTime"
+                        style="@style/customTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/tvAttendancePunchOutTime"
+                        android:text="@string/frag_attendance_out_time"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dimen_screen"
+                android:layout_marginTop="@dimen/dimen_screen"
+                android:layout_marginRight="@dimen/dimen_screen"
+                android:background="@color/colorDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_screen"
+                android:layout_marginTop="@dimen/dimen_screen"
+                android:layout_marginRight="@dimen/dimen_screen"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/customTextView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/frag_attendance_current_location"
+                    android:textColor="@color/colorYellow" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_screen"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_gps_24dp"
+                        android:tint="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_screen"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/customTextView"
+                                android:minWidth="80dp"
+                                android:text="@string/label_latitude"
+                                android:textColor="@android:color/white"
+                                android:textStyle="normal" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_current_location_latitude"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/customTextView"
+                                android:minWidth="80dp"
+                                android:text="@string/label_longitude"
+                                android:textColor="@android:color/white"
+                                android:textStyle="normal" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_current_location_longitude"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgVAttendancePunchIn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/cv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cv"
+        app:srcCompat="@drawable/img_module_mark_attendance" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgVAttendancePunchOut"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/cv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cv"
+        app:srcCompat="@drawable/img_module_mark_attendance" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgVAttendancePunchComplete"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/cv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cv"
+        app:srcCompat="@drawable/img_module_mark_attendance" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_refresh_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:backgroundTint="@color/colorAccent"
+        app:elevation="0dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/cv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cv"
+        app:srcCompat="@drawable/ic_refresh_24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

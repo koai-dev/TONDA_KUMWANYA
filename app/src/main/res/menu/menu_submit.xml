@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_info"
+        android:icon="@drawable/ic_info_24dp"
+        android:title="Information"
+        app:showAsAction="always"
+        android:visible="false"/>
+    <item
+        android:id="@+id/item_submit"
+        android:icon="@drawable/ic_tick_24dp"
+        android:title="Submit"
+        app:showAsAction="always" />
+</menu>

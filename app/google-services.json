@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "931114014088",
+    "firebase_url": "https://tondakumwanya1-default-rtdb.firebaseio.com",
+    "project_id": "tondakumwanya1",
+    "storage_bucket": "tondakumwanya1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931114014088:android:5f20a46da322533a40163d",
+        "android_client_info": {
+          "package_name": "come.tondakumwanya.rbpessacash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB81fXstNyw4heEBFYG8Ubi9ds_Vj9fZMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

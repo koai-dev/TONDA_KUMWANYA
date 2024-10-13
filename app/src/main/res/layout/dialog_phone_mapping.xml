@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:minWidth="@dimen/minDialogWidth"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_fifteen">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_transparent"
+        android:padding="@dimen/dimen_ten"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_user_id"
+            android:textColor="@android:color/white"
+            android:minWidth="75dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_marginRight="@dimen/dimen_ten"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_person_email_id"
+            style="@style/customEditText"
+            android:background="@null"
+            android:enabled="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_transparent"
+        android:layout_marginTop="@dimen/dimen_ten"
+        android:padding="@dimen/dimen_ten"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_device_id"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:minWidth="75dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_marginRight="@dimen/dimen_ten"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_device_unique_id"
+            style="@style/customEditText"
+            android:background="@null"
+            android:enabled="false"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_transparent"
+        android:layout_marginTop="@dimen/dimen_ten"
+        android:padding="@dimen/dimen_ten"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_reason"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:minWidth="75dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_marginRight="@dimen/dimen_ten"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_reason"
+            style="@style/customEditText"
+            android:background="@null"
+            android:hint="@string/hint_enter_reason"
+            android:inputType="textMultiLine"
+            android:maxLines="3"/>
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/customNotes"
+        android:layout_marginTop="@dimen/dimen_five"
+        android:text="@string/label_re_map_device_condition" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/customTextView"
+        android:layout_marginTop="@dimen/dimen_five"
+        android:text="@string/label_approve_device_mapping_request_from_admin" />
+
+    <RelativeLayout
+        android:id="@+id/rl_adContainer"
+        android:layout_marginTop="@dimen/dimen_ten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

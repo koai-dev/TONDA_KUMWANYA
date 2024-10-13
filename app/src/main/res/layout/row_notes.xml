@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:padding="@dimen/dimen_ten">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dot_height"
+        android:layout_marginRight="@dimen/dot_margin_right"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:textSize="@dimen/dot_text_size"
+        android:layout_marginEnd="@dimen/dot_margin_right" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        style="@style/customTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_dot"
+        android:textColor="@color/note_list_text"
+        android:textSize="@dimen/dimen_Value"
+        android:fontFamily="sans-serif-medium"
+        android:layout_toEndOf="@id/tv_dot" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_description"
+        style="@style/customTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_toRightOf="@id/tv_dot"
+        android:textColor="@color/timestamp"
+        android:textSize="@dimen/note_list_text"
+        android:layout_toEndOf="@id/tv_dot" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_date"
+        style="@style/customTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_description"
+        android:textColor="@color/note_list_text"
+        android:textSize="@dimen/dimen_small"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

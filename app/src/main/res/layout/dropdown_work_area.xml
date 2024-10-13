@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_sp_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:ellipsize="marquee"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dimen_ten"
+    android:paddingTop="@dimen/dimen_five"
+    android:paddingRight="@dimen/dimen_ten"
+    android:paddingBottom="@dimen/dimen_five"
+    android:textAlignment="inherit"
+    android:textColor="@color/colorPrimaryText" />

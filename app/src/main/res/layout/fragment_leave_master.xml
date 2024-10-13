@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_fifteen">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Leave Types"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_ten">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/iv_add_leave_type"
+                android:layout_marginRight="@dimen/dimen_ten"
+                android:layout_toStartOf="@+id/iv_add_leave_type">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_leave_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_light_gray"
+                    android:hint="Leave Name (Exe. Casual, Sick)"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:layout_toLeftOf="@+id/et_leave_days"
+                    android:layout_marginRight="@dimen/dimen_ten"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:layout_toStartOf="@+id/et_leave_days"
+                    android:layout_marginEnd="@dimen/dimen_ten" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_leave_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_light_gray"
+                    android:gravity="top|left"
+                    android:minWidth="50dp"
+                    android:hint="Days"
+                    android:layout_alignParentRight="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_add_leave_type"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="?attr/selectableItemBackground"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_add"
+                android:layout_centerInParent="true"
+                android:tint="@android:color/white"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:minHeight="?android:attr/actionBarSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextAppearance="@style/ToolbarTitle" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_above="@+id/ll_footer"
+        android:layout_below="@+id/toolbar"/>
+
+
+</RelativeLayout>

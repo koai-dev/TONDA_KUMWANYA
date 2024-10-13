@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorPrimaryLight">#C5CAE9</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorLightGray">#E2E0E0</color>
+    <color name="colorYellow">#DFDF00</color>
+
+    <color name="colorSelectedDay">@android:color/holo_orange_dark</color>
+    <color name="colorUnSelectedDay">@android:color/white</color>
+    <color name="colorPublicHoliday">#F67E7D</color>
+    <color name="colorNonWorkingDay">@android:color/darker_gray</color>
+    <color name="colorWorkingHours">@android:color/black</color>
+    <color name="colorAbsentDay">@android:color/holo_red_dark</color>
+    <color name="colorPresentButLeaveBefore">@android:color/holo_orange_dark</color>
+    <color name="colorFullDayPresent">@android:color/holo_green_dark</color>
+    <color name="colorHalfDayPresent">@android:color/holo_blue_dark</color>
+    <color name="colorMissPunch">@android:color/holo_purple</color>
+    <color name="colorTransparent">#4A111111</color>
+    <color name="profile_default_tint">#e0e0e0</color>
+    <!-- Material Calendar -->
+    <color name="calendar_month_text_color">@android:color/black</color>
+    <color name="calendar_day_text_color">#A4B5D2</color>
+    <color name="calendar_number_text_color">#ff000000</color>
+    <color name="saved_event_selector_color">@android:color/holo_blue_bright</color>
+    <color name="calendar_time_sheet_not_filled_color">#ff000000</color>
+
+    <color name="msg_no_notes">#999</color>
+    <color name="hint_enter_note">#89c3c3c3</color>
+    <color name="timestamp">#858585</color>
+    <color name="note_list_text">#232323</color>
+</resources>

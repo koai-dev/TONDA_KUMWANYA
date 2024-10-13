@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dimen_twenty"
+        android:paddingBottom="@dimen/dimen_twenty">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_notification_permission" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/customTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_twenty"
+                android:text="Enable Notifications"
+                android:textSize="@dimen/dimen_large" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/customTextView"
+                android:id="@+id/txt_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_ten"
+                android:text="@string/label_notification_permission_requires_for"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/dimen_twenty"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/customTextView"
+                android:id="@+id/txt_description_for_required_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_ten"
+                android:text="When you are requested access, please tap “Allow”."
+                android:paddingHorizontal="@dimen/dimen_twenty"
+                android:textAlignment="center"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_enable"
+                style="@style/customButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_twenty"
+                android:layout_marginBottom="@dimen/dimen_three"
+                android:enabled="true"
+                android:includeFontPadding="false"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingVertical="@dimen/dimen_ten"
+                android:text="Accept Permission" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_no_thanks"
+                style="@style/customTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_ten"
+                android:padding="@dimen/dimen_five"
+                android:paddingHorizontal="@dimen/dimen_twenty"
+                android:text="No thanks"
+                android:visibility="gone"
+                app:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

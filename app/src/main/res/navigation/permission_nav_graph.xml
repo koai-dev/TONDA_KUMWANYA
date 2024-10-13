@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/permission_nav_graph"
+    app:startDestination="@id/enableNotificationPermissionFragment">
+
+    <fragment
+        android:id="@+id/enableNotificationPermissionFragment"
+        android:name="in.gabsinfo.usertimeslotgeofenceattendance.fragment.EnableNotificationPermissionFragment"
+        android:label="EnableNotificationPermissionFragment"
+        tools:layout="@layout/fragment_enable_notification_permission" />
+
+    <fragment
+        android:id="@+id/enableLocationPermissionFragment"
+        android:name="in.gabsinfo.usertimeslotgeofenceattendance.fragment.EnableLocationPermissionFragment"
+        android:label="EnableLocationPermissionFragment"
+        tools:layout="@layout/fragment_enable_location_permission"/>
+
+    <fragment
+        android:id="@+id/enableBackgroundLocationPermissionFragment"
+        android:name="in.gabsinfo.usertimeslotgeofenceattendance.fragment.EnableBackgroundLocationPermissionFragment"
+        android:label="EnableBackgroundLocationPermissionFragment"
+        tools:layout="@layout/fragment_enable_background_location_permission" />
+
+
+</navigation>
