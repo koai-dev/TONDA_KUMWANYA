@@ -36,7 +36,7 @@
         app:layout_constraintGuide_percent="0.95" />
 
 
-    <com.github.florent37.shapeofview.shapes.ArcView
+    <io.github.florent37.shapeofview.shapes.ArcView
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/horizontal2"
@@ -51,7 +51,7 @@
             android:layout_height="match_parent"
             android:background="@color/colorPrimaryDark" />
 
-    </com.github.florent37.shapeofview.shapes.ArcView>
+    </io.github.florent37.shapeofview.shapes.ArcView>
 
 
     <androidx.appcompat.widget.Toolbar
