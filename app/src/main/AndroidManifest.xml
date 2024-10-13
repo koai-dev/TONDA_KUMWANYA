@@ -3,23 +3,22 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-
-    <!-- If your app doesn't need to access media files that other apps created,
-     set the "maxSdkVersion" attribute to "28" instead. -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <!--
+ If your app doesn't need to access media files that other apps created,
+     set the "maxSdkVersion" attribute to "28" instead.
+    -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
 
     <permission
@@ -34,9 +33,7 @@
         </intent>
     </queries>
 
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-
-    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Required OpenGL ES 2.0. for Maps V2 -->
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
@@ -44,14 +41,13 @@
         android:name="android.hardware.camera"
         android:required="false" />
 
-
     <application
-        android:name="in.gabsinfo.usertimeslotgeofenceattendance.application.AttendanceApplication"
+        android:name=".application.AttendanceApplication"
         android:allowBackup="true"
+        android:enableOnBackInvokedCallback="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:enableOnBackInvokedCallback="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -60,81 +56,67 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-
         <activity
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.SplashActivity"
+            android:name=".activity.SplashActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.OnBoardingActivity"
+            android:name=".activity.OnBoardingActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.SignInActivity"
+            android:name=".activity.SignInActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
             android:screenOrientation="portrait"
-            android:exported="false"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.UserDashboardPermissionActivity"
+            android:name=".activity.UserDashboardPermissionActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.AdminDashboardActivity"
+            android:name=".activity.AdminDashboardActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.UserDashboardActivity"
+            android:name=".activity.UserDashboardActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
-
-
         <activity
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.PunchOutAlarmActivity"
+            android:name=".activity.PunchOutAlarmActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.DisplayAttendancePositionOnMapActivity"
+            android:name=".activity.DisplayAttendancePositionOnMapActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.DisplayEmployeeTrackingLocationOnMapActivity"
+            android:name=".activity.DisplayEmployeeTrackingLocationOnMapActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.ImagePickerActivity"
+            android:name=".activity.ImagePickerActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false"
-            android:screenOrientation="portrait" />
-
-
-        <!-- uCrop cropping activity -->
+            android:screenOrientation="portrait" /> <!-- uCrop cropping activity -->
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
-            android:screenOrientation="portrait"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <provider
@@ -147,35 +129,31 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-
         <service
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.service.SendFCMNotificationService"
+            android:name=".service.SendFCMNotificationService"
             android:enabled="true"
             android:exported="false" />
-
         <service
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.service.MyFirebaseMessagingService"
+            android:name=".service.MyFirebaseMessagingService"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
         <service
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.service.TrackingService"
-            android:exported="false"
-            android:enabled="true" />
+            android:name=".service.TrackingService"
+            android:enabled="true"
+            android:exported="false" />
 
         <receiver
-            android:name="in.gabsinfo.usertimeslotgeofenceattendance.receiver.AutoStartReceiver"
+            android:name=".receiver.AutoStartReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -187,7 +165,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyATQitSZFSUGijsywemrfkikkXo8R1C1IA" />
-
     </application>
 
 </manifest>

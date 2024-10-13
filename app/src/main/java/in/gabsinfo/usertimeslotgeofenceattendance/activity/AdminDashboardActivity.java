@@ -84,7 +84,6 @@ public class AdminDashboardActivity extends AppCompatActivity implements FindCom
     private FrameLayout mFlContainer;
     private Fragment mTopFragment = null;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
