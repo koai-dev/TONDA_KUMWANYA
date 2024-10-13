@@ -23,7 +23,7 @@
             android:layout_alignParentTop="true"
             android:layout_weight="0.3">
 
-            <com.github.florent37.shapeofview.shapes.ArcView
+            <io.github.florent37.shapeofview.shapes.ArcView
                 android:id="@+id/av"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -43,7 +43,7 @@
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/dimen_xlarge" />
 
-            </com.github.florent37.shapeofview.shapes.ArcView>
+            </io.github.florent37.shapeofview.shapes.ArcView>
 
         </RelativeLayout>
 

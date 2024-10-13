@@ -83,7 +83,7 @@
             app:layout_constraintRight_toRightOf="@+id/right"
             app:layout_constraintTop_toBottomOf="@+id/horizontal1">
 
-            <com.github.florent37.shapeofview.shapes.DiagonalView
+            <io.github.florent37.shapeofview.shapes.DiagonalView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
@@ -216,9 +216,9 @@
                         app:srcCompat="@drawable/ic_tick_24dp" />
 
                 </RelativeLayout>
-            </com.github.florent37.shapeofview.shapes.DiagonalView>
+            </io.github.florent37.shapeofview.shapes.DiagonalView>
 
-            <com.github.florent37.shapeofview.shapes.DiagonalView
+            <io.github.florent37.shapeofview.shapes.DiagonalView
                 android:id="@+id/dv_create_admin_account"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -264,7 +264,7 @@
 
 
                 </LinearLayout>
-            </com.github.florent37.shapeofview.shapes.DiagonalView>
+            </io.github.florent37.shapeofview.shapes.DiagonalView>
         </LinearLayout>
 
 

@@ -16,7 +16,6 @@ import androidx.fragment.app.Fragment;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
-import com.github.florent37.shapeofview.shapes.DiagonalView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -36,6 +35,7 @@ import in.gabsinfo.usertimeslotgeofenceattendance.model.UserRegistrationInputMod
 import in.gabsinfo.usertimeslotgeofenceattendance.utils.CommonMethods;
 import in.gabsinfo.usertimeslotgeofenceattendance.utils.ConstantData;
 import in.gabsinfo.usertimeslotgeofenceattendance.utils.SharePreferences;
+import io.github.florent37.shapeofview.shapes.DiagonalView;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
     private Fragment mTopFragment = null;

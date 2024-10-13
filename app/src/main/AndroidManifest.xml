@@ -76,48 +76,57 @@
         <activity
             android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.OnBoardingActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.SignInActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait"
+            android:exported="false"
             android:windowSoftInputMode="adjustPan" />
 
         <activity
             android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.UserDashboardPermissionActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.AdminDashboardActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.UserDashboardActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
             android:screenOrientation="portrait" />
 
 
         <activity
             android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.PunchOutAlarmActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.DisplayAttendancePositionOnMapActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.DisplayEmployeeTrackingLocationOnMapActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="in.gabsinfo.usertimeslotgeofenceattendance.activity.ImagePickerActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
             android:screenOrientation="portrait" />
 
 
@@ -125,6 +134,7 @@
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"
+            android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <provider
@@ -154,6 +164,7 @@
 
         <service
             android:name="in.gabsinfo.usertimeslotgeofenceattendance.service.TrackingService"
+            android:exported="false"
             android:enabled="true" />
 
         <receiver
